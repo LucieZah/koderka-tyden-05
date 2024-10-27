@@ -20,8 +20,8 @@ header > :last-child, footer > :last-child, article > :last-child, nav > :last-c
 .hlavicka { background-color: #2ecc71; }
 .menu 		{ background-color: #e74c3c; }
 .obsah		{ background-color: #f1c40f ; }
-.reklama1	{ background-color: #8e44ad; }
-.reklama2	{ background-color: mediumturquoise; }
+.rekl1	{ background-color: #8e44ad; }
+.rekl2	{ background-color: mediumturquoise; }
 .paticka 	{ background-color: dodgerblue; }
 
 /* ---------------------------------------------------- */
@@ -33,3 +33,51 @@ header > :last-child, footer > :last-child, article > :last-child, nav > :last-c
 	- 1000px
 */
 
+.rekl1 {
+	margin: 0 0 20px 0;
+	padding: 1px 20px;
+}
+
+.rekl2 {
+	padding: 1px 20px;
+}
+
+@media screen and (min-width:640px) {
+	.obsah {
+		display: flex;
+	}
+	.clanek {
+		width: 60%;
+	}
+	.rekl {
+		width: 40%;
+	}
+}
+
+@media screen and (min-width:1000px) {
+	.kontejner {
+		display: flex;
+	}
+	
+	.menu {
+		width: 25%;
+	}
+	.obsah {
+		flex-wrap: wrap;
+		width: 75%;
+	}
+
+	.clanek {
+		width: 100%;
+	}
+	
+	.rekl {
+		display: flex;
+		width: 100%;
+	}
+	
+	.rekl1,
+	.rekl2 {
+		flex: 1 1 calc((100%/2) - 20px);
+	}
+}
