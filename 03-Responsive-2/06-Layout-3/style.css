@@ -34,8 +34,8 @@ header > :last-child, footer > :last-child, article > :last-child, nav > :last-c
 */
 
 .rekl1 {
-	margin: 0 0 20px 0;
 	padding: 1px 20px;
+	margin-bottom: 20px;
 }
 
 .rekl2 {
@@ -74,10 +74,17 @@ header > :last-child, footer > :last-child, article > :last-child, nav > :last-c
 	.rekl {
 		display: flex;
 		width: 100%;
+		
 	}
 	
 	.rekl1,
 	.rekl2 {
-		flex: 1 1 calc((100%/2) - 20px);
+		flex: 1 0 calc((100%/2) - 20px);
+		
+	}
+	
+	.rekl1 {
+		margin-right: 20px;
+		margin-bottom: 0;
 	}
 }
